@@ -127,7 +127,7 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
+unsigned int defaultfg = 2;
 unsigned int defaultbg = 0;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
@@ -199,6 +199,9 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ TERMMOD,              XK_E,           ttysend,        {.s =  "nvim\n"} },
+	{ TERMMOD,              XK_F,           ttysend,        {.s =  "vifm .\n"} },
+	{ TERMMOD,              XK_T,           ttysend,        {.s =  "tmux\n"} },
 };
 
 /*
